@@ -69,6 +69,9 @@ const btnClassHandle = (key: string) => {
       width: 145px;
       height: 168px;
       cursor: pointer;
+      img {
+        width: 100%;
+      }
     }
     .btn-item-one {
       top: 143px;
@@ -80,11 +83,11 @@ const btnClassHandle = (key: string) => {
     }
     .btn-item-three {
       top: 194px;
-      left: 683px;
+      left: 1100px;
     }
     .btn-item-four {
       top: 143px;
-      left: 298px;
+      left: 1484px;
     }
   }
 }
