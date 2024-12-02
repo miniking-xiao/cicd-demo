@@ -3,7 +3,13 @@
     <img class="bgc" src="../assets/images/bgc.jpg" alt="" />
     <div class="dv-index-main">
       <div class="dv-btn-group">
-        <div class="btn-item" :class="[btnClassHandle(item.num)]" v-for="(item, index) in btnArr" :key="index">
+        <div
+          class="btn-item"
+          :class="[btnClassHandle(item.num)]"
+          v-for="(item, index) in btnArr"
+          :key="index"
+          @click="btnLinkHandle(item.key)"
+        >
           <img :src="getImgUrl(item.url)" alt="" />
         </div>
       </div>
@@ -13,23 +19,29 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
 const btnArr = ref<any>([
   {
     num: 'one',
-    url: '安全基础'
+    url: '安全基础',
+    urlKey: 'datav/security'
   },
   {
     num: 'two',
-    url: '双重预防'
+    url: '双重预防',
+    urlKey: 'datav/double-prevention-mechanism'
   },
   {
     num: 'three',
-    url: '特殊作业'
+    url: '特殊作业',
+    urlKey: 'datav/double-prevention-mechanism'
   },
   {
     num: 'four',
-    url: '重大危险源'
+    url: '重大危险源',
+    urlKey: 'datav/major-hazard'
   }
 ])
 const getImgUrl = (url: string) => {
@@ -37,6 +49,11 @@ const getImgUrl = (url: string) => {
 }
 const btnClassHandle = (key: string) => {
   return `btn-item-${key}`
+}
+const btnLinkHandle = (key: string) => {
+  router.push({
+    path: `/${key}`
+  })
 }
 </script>
 
