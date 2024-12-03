@@ -1,0 +1,223 @@
+@import url('./base.css');
+
+#app {
+  .chart-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+  }
+
+  .layout-left {
+    position: absolute;
+    left: 16px;
+    top: calc(var(--app-header-height) + 14px);
+    min-width: 200px;
+    height: calc(100% - var(--app-header-height));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.48), transparent);
+    z-index: 1000;
+  }
+
+  .layout-right {
+    position: absolute;
+    right: 16px;
+    top: calc(var(--app-header-height) + 14px);
+    min-width: 200px;
+    height: calc(100% - var(--app-header-height));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.48), transparent);
+    z-index: 1000;
+  }
+  .layout-center {
+    position: absolute;
+    right: calc(100% - 424px - 424px - 18px - 300px);
+    bottom: calc(var(--app-header-height) - 20px);
+    min-width: 200px;
+    height: calc(100% - var(--app-header-height)-14px);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.48), transparent);
+    z-index: 1000;
+  }
+  .layout-center2 {
+    position: absolute;
+    right: calc(100% - 424px - 424px - 424px - 38px);
+    bottom: calc(var(--app-header-height) - 40px);
+    min-width: 200px;
+    height: calc(100% - var(--app-header-height)-14px);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.48), transparent);
+    z-index: 1000;
+  }
+
+  .layout-center3 {
+    position: absolute;
+    right: calc(100% - 424px - 424px - 28px);
+    bottom: calc(var(--app-header-height) - 40px);
+    min-width: 200px;
+    height: calc(100% - var(--app-header-height)-14px);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.48), transparent);
+    z-index: 1000;
+  }
+  .layout-center4 {
+    position: absolute;
+    right: calc(100% - 424px - 298px - 28px);
+    top: calc(var(--app-header-height) - -15px);
+    min-width: 200px;
+    height: calc(100% - var(--app-header-height)-14px);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.48), transparent);
+    z-index: 1000;
+  }
+  /* .menuBox{} */
+
+  .layout-left,
+  .layout-right {
+    color: yellow;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .font-12 {
+    font-size: 12px;
+  }
+
+  .font-14 {
+    font-size: 14px;
+  }
+
+  .font-16 {
+    font-size: 16px;
+  }
+
+  .font-24 {
+    font-size: 24px;
+  }
+  .map3d-info-label {
+    position: absolute;
+    pointer-events: all;
+    /* width: 30px;
+        height: 48px; */
+    transform: translateX(-50%) translateY(-100%);
+    /* border: 1px solid #05f3ff; */
+    /* opacity: 0; */
+    z-index: 12;
+    cursor: pointer;
+  }
+  .map-label-top {
+    position: absolute;
+    bottom: 54px;
+    right: 100%;
+    transform: translateX(50%);
+    pointer-events: all;
+  }
+}
+
+.securityDepartment {
+  /* position: absolute; */
+  /* left: 712px; */
+  /* top: 10; */
+  background-image: url(@/assets/images/弹窗背景.png);
+  width: 286px;
+  height: 216px;
+  z-index: 99999999999;
+  /* background-size: cover; */
+  .securityDepartment_title {
+    padding-left: 18px;
+    padding-top: 5px;
+    color: #eae8e9;
+  }
+  .articles {
+    padding-left: 20px;
+    padding-top: 20px;
+    div {
+      padding: 10px 0;
+    }
+  }
+}
+
+.Output {
+  position: absolute;
+  left: 112px;
+  /* top: 400px; */
+  background-image: url(@/assets/images/数据输出.png);
+  width: 300px;
+  height: 145px;
+  background-size: cover;
+  .Output_btn {
+    width: 100%;
+    height: 30px;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    span {
+      display: inline-block;
+      padding: 1px 10px;
+      display: flex;
+      align-items: center;
+      color: #feecec;
+      justify-content: center;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    span:first-child {
+      margin-left: 30px;
+    }
+  }
+  .personnel,
+  .time {
+    margin-left: 30px;
+    /* padding-top: 4px; */
+  }
+  .emergencyResponse_btn {
+    margin-left: 30px;
+    padding-top: 8px;
+    span {
+      display: inline-block;
+      padding: 0px 6px;
+      color: #feecec;
+      justify-content: center;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .accident_btn {
+      position: relative;
+      .accidentAnalysis {
+        /* display:none !important; */
+        width: 290px;
+        background-image: url(@/assets/images/弹窗背景.png);
+        background-repeat: auto;
+        background-size: cover;
+        /* margin-top: 10px; */
+        position: absolute;
+        bottom: -390px;
+        left: -200px;
+        z-index: 88888;
+        .dataOutputTitle {
+          width: 100%;
+          padding-left: 26px;
+          padding-top: 11px;
+          color: #eae8e9;
+          position: relative;
+          .closeIconAccidentAnalysisFlage {
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            cursor: pointer;
+          }
+        }
+        .dataOutputCount {
+          margin-top: 20px;
+          margin-left: 25px;
+          margin-bottom: 10px;
+          p {
+            color: #c5faff;
+            height: 30px;
+          }
+          .dataOutputBtn {
+            width: 100px;
+            height: 25px;
+            color: #ffffff;
+            line-height: 20px;
+            background: #235e9c;
+          }
+        }
+      }
+    }
+  }
+}

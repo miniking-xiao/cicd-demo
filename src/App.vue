@@ -3,9 +3,11 @@
   <VScaleScreen width="1920" height="1080">
     <RouterView />
     <AppMap></AppMap>
+    <AppHeader>></AppHeader>
   </VScaleScreen>
 </template>
 
 <script setup lang="ts">
 import VScaleScreen from 'v-scale-screen'
+import AppHeader from '@/components/AppHeader.vue'
 </script>
