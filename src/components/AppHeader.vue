@@ -8,14 +8,6 @@
           <p>哈</p>
         </div>
         <div class="text-base">2020-20-32</div>
-        <!-- <div class="text-base">{{ state.currentTime }}</div>
-        <div class="tep">{{ state.weather.temperature_float }}°</div>
-        <div class="weater-desc">
-          <p>{{ state.weather.weather }}</p>
-          <p>{{ state.weather.winddirection }}</p>
-        </div>
-        <div class="text-base">{{ state.currentTime }}</div>
-         -->
       </div>
       <a class="nav-button">数字孪生</a>
     </div>
@@ -41,7 +33,7 @@
   left: 0;
   top: 0;
   color: #ffb432;
-  background-image: url('@/assets/imgs/顶部导航背景.png'),
+  background-image: url('@/assets/images/顶部导航背景.png'),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.01));
   background-repeat: no-repeat;
   background-position: center 0;
@@ -61,9 +53,9 @@
     align-items: center;
     justify-content: space-around;
     .tep {
-      font-size: 33px;
+      font-size: 32px;
       padding-left: 72px;
-      background-image: url('@/assets/imgs/duoyun.png');
+      background-image: url('@/assets/images/duoyun.png');
       background-repeat: no-repeat;
       background-position: 24px center;
     }
@@ -78,18 +70,6 @@
     }
   }
 }
-.nav-button {
-  width: 173px;
-  height: 46px;
-  line-height: 46px;
-  font-size: 16px;
-  text-align: center;
-  color: #fff;
-  background-image: url('@/assets/imgs/导航按钮.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
 .app-header-center {
   line-height: 72px;
   font-size: 40px;
@@ -97,19 +77,31 @@
   background-clip: text;
   color: transparent;
   font-family: c-huakang;
+  font-weight: 800;
 }
 .app-header-right {
   width: 28%;
   height: 68px;
-  margin-top: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .back-btn {
-    padding-left: 24px;
-    background-image: url('@/assets/imgs/返回.png');
-    background-repeat: no-repeat;
-    background-position: 0 center;
-  }
+}
+.nav-button {
+  width: 173px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  background-image: url('@/assets/images/导航按钮.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.back-btn {
+  padding-left: 24px;
+  background-image: url('@/assets/images/返回.png');
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }
 </style>

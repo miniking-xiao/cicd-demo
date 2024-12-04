@@ -1,5 +1,8 @@
 <template>
   <RouterView></RouterView>
+  <AppHeader>></AppHeader>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AppHeader from '@/components/AppHeader.vue'
+</script>

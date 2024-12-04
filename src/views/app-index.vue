@@ -8,7 +8,7 @@
           :class="[btnClassHandle(item.num)]"
           v-for="(item, index) in btnArr"
           :key="index"
-          @click="btnLinkHandle(item.key)"
+          @click="btnLinkHandle(item.urlKey)"
         >
           <img :src="getImgUrl(item.url)" alt="" />
         </div>
@@ -50,9 +50,9 @@ const getImgUrl = (url: string) => {
 const btnClassHandle = (key: string) => {
   return `btn-item-${key}`
 }
-const btnLinkHandle = (key: string) => {
+const btnLinkHandle = (urlKey: string) => {
   router.push({
-    path: `/${key}`
+    path: `/${urlKey}`
   })
 }
 </script>

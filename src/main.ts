@@ -1,10 +1,11 @@
+import './style/reset.scss'
+import './assets/main.css'
+
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
-import './style/reset.scss'
-import './assets/main.css'
 
 // 全局组件--地图
 import map from '@map/app-map.vue'
