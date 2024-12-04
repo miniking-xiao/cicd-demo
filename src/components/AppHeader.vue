@@ -2,12 +2,12 @@
   <div class="app-header">
     <div class="app-header-left">
       <div class="weather">
-        <div class="tep">34°</div>
+        <div class="tep">{{ state.weather.temperature_float }}°</div>
         <div class="weater-desc">
-          <p>请</p>
-          <p>哈</p>
+          <p>{{ state.weather.weather }}</p>
+          <p>{{ state.weather.winddirection }}</p>
         </div>
-        <div class="text-base">2020-20-32</div>
+        <div class="text-base">{{ state.currentTime }}</div>
       </div>
       <a class="nav-button">数字孪生</a>
     </div>
@@ -20,7 +20,17 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useFunction } from '@/hooks/useFunction'
+import { onMounted } from 'vue'
+
+const { state, getApiAxios, updateTime } = useFunction()
+onMounted(() => {
+  updateTime()
+  getApiAxios()
+  setInterval(updateTime, 1000)
+})
+</script>
 
 <style scoped lang="scss">
 .app-header {
