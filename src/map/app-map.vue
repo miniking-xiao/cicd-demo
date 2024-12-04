@@ -4,8 +4,11 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
+import { useMapConfig } from '@store/mapConfig'
 
-onMounted(() => {
+onMounted(async () => {
+  // 获取园区数据
+  await useMapConfig().getPark()
   // 创建 script 标签
   const script = document.createElement('script')
   // 2d58761eb6bbdac6095476b73d4d1a82 密钥需要公司弄
@@ -26,6 +29,8 @@ function initMap() {
   tmap.enableDrag()
   // 设置地图类型
   tmap.setMapType(TMAP_SATELLITE_MAP)
+  // 设置地图位置和覆盖物
+  useMapConfig().initConfigForMap(tmap)
 }
 </script>
 
