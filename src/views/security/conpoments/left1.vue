@@ -3,7 +3,7 @@
     <div class="label">
       <div class="flex items-center">
         <img src="@/assets/images/化工工艺.png" alt="" />
-        <span>重点监管危险化工工艺</span>
+        <span>重点监管危险化工工艺222</span>
       </div>
       <div>
         <span class="hggy count">3</span>
