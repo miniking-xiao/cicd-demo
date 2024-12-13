@@ -1,21 +1,17 @@
 name: deploy
-
 on:
   push:
     branches:[master] # master 分支有push时触发
     paths-ignore:   # 下列文件的变更不触发部署，可自定添加
       - README.md
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       # 下载源码
       # 这一步就是检出你的仓库并下载里面的代码到 runner 中，actions/checkout@v4 是官方自己造的轮子，直接拿来使用
       - uses: actions/checkout@v4
         name: Checkout
-
       # 打包构建
       - name: Build
         uses: actions/setup-node@master
@@ -23,7 +19,6 @@ jobs:
           node-version: "16.x"
       - run: npm install # 安装依赖
       - run: npm run build # 打包
-
       # 部署到 github pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3   # 使用部署到 github pages 的 action
