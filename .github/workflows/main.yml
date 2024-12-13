@@ -1,7 +1,5 @@
 name: deploy
-on:
-  push:
-    branches:[master] # master 分支有push时触发
+on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
