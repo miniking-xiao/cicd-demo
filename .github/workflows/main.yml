@@ -2,8 +2,6 @@ name: deploy
 on:
   push:
     branches:[master] # master 分支有push时触发
-    paths-ignore:   # 下列文件的变更不触发部署，可自定添加
-      - README.md
 jobs:
   deploy:
     runs-on: ubuntu-latest
